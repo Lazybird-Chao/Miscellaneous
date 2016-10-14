@@ -1,6 +1,6 @@
 package myleetcode;
 
-public class SubTwoInt {
+public class SumTwoInt {
 	public int getSum(int a, int b){
 		int i;
 		for(i=0; i<a; i++);
