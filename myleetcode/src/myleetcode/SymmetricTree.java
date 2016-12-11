@@ -2,7 +2,7 @@ package myleetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-import myleetcode.InvertBtree.TreeNode;
+
 
 public class SymmetricTree {
 	public boolean isSymmetric(TreeNode root){

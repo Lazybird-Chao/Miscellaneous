@@ -1,6 +1,5 @@
 package myleetcode;
 
-import myleetcode.MaxDepthOfBtree.TreeNode;
 
 public class InvertBtree {
 	public class TreeNode {

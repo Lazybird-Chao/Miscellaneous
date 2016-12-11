@@ -1,5 +1,5 @@
 package myleetcode;
-import myleetcode.DeleteNode.ListNode;
+
 
 public class RemoveDupInList {
 	public ListNode deleteDuplicates(ListNode head){

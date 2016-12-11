@@ -1,5 +1,5 @@
 package myleetcode;
-import myleetcode.DeleteNode.ListNode;
+
 
 public class LinkedListCycle {
 	public boolean hasCycle(ListNode head){

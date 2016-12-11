@@ -2,12 +2,6 @@ package myleetcode;
 
 
 public class MaxDepthOfBtree {
-	public class TreeNode {
-	      int val;
-	      TreeNode left;
-	      TreeNode right;
-	      TreeNode(int x) { val = x; }
-	}
 	
 	public int maxDepth(TreeNode root){
 		int depth = 0;

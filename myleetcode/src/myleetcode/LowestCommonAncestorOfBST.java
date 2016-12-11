@@ -1,5 +1,5 @@
 package myleetcode;
-import myleetcode.MaxDepthOfBtree.TreeNode;
+
 
 public class LowestCommonAncestorOfBST {
 	public TreeNode LowestCommonAncestor(TreeNode root,

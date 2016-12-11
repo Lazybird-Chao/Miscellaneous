@@ -1,5 +1,5 @@
 package myleetcode;
-import myleetcode.DeleteNode.ListNode;
+
 
 public class SwapNodesInPairs {
 	public ListNode swapPairs(ListNode head){

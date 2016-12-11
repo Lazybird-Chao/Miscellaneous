@@ -1,5 +1,5 @@
 package myleetcode;
-import myleetcode.DeleteNode.ListNode;
+
 
 public class ReverseLinklist {
 	public ListNode reverseList(ListNode head){

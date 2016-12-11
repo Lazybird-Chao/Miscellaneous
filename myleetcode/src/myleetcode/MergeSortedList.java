@@ -1,5 +1,5 @@
 package myleetcode;
-import myleetcode.DeleteNode.ListNode;
+
 
 public class MergeSortedList {
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
