@@ -1,9 +1,11 @@
 package mylintcode;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class BuildPostOffice2 {
+	/*
 	public int shortestDistance(int[][] grid) {
 		if(grid==null || grid.length ==0 || grid[0].length ==0)
 			return -1;
@@ -73,6 +75,112 @@ public class BuildPostOffice2 {
 		else
 			 return true;
 	}
+	*/
+	
+	
+	public class Point{
+        int x;
+        int y;
+        public Point(int x, int y){
+            this.x = x;
+            this.y = y;
+        }
+    }
+   public int shortestDistance(int[][] grid) {
+       // Write your code here
+       if(grid == null || grid.length == 0 || grid[0].length == 0){
+           return -1;
+       }
+       ArrayList<Point> offices = new ArrayList<Point>();
+       int m = grid.length;
+       int n = grid[0].length;
+       for(int i = 0; i < m; i++){
+          for(int j = 0; j < n; j++){
+              if(grid[i][j] == 1){
+                  Point point = new Point(i, j);
+                  offices.add(point);
+               }
+           }
+       } 
+       int[][] distance = new int[m][n];
+       boolean[][] blackList = new boolean[m][n];
+       for(Point office: offices){
+           updateDis(office, grid, distance, blackList);
+       }
+       int smallest = findSmallest(grid, distance, blackList);
+      return smallest;
+   }
+    public void updateDis(Point office, int[][] grid, int[][] distance, boolean[][] blackList){
+        int[] helperX = {1, 0, -1, 0};
+        int[] helperY = {0, 1, 0, -1};
+        int m = grid.length;
+        int n = grid[0].length;
+        boolean[][] accessed = new boolean[m][n];
+        Queue<Point> queue = new LinkedList<Point>();
+        queue.offer(office);
+        int steps = 0;
+        while(queue.isEmpty()){
+            int size = queue.size();
+            steps++;
+            for(int i = size; i >0; i-- ){
+                Point cur = queue.poll();
+                for(int z = 0; z < 4; z++){
+                   Point next = new Point(cur.x + helperX[z], cur.y + helperY[z]);
+                   if(!inBound(next, grid)){
+                       continue;
+                   }
+                   if(accessed[next.x][next.y] == true){
+                       continue;
+                   }
+                   if(grid[next.x][next.y] == 0){
+                       accessed[next.x][next.y] = true;
+                       distance[next.x][next.y] += steps;
+                       queue.offer(next);
+                   }
+                }
+            }
+       }
+        for( int p = 0 ; p < m; p++){
+           for(int q = 0 ; q < n; q++){
+               if(accessed[p][q] == false){
+                   blackList[p][q] = true;
+               }
+           }
+       }
+   }
+    public boolean inBound(Point p, int[][]grid){
+        int l = grid.length;
+        int w = grid[0].length;
+        if(p.x < 0 || p.x >= l){
+            return false;
+        }
+        if(p.y < 0 || p.y >= w){
+            return false;
+        }
+        return true;
+    }
+    
+    public int findSmallest(int[][] grid,int[][] distance, boolean[][] blackList){
+       int shortest =  Integer.MAX_VALUE;
+       int m = grid.length;
+       int n = grid[0].length;
+       for(int x = 0; x < m; x++){
+           for(int y=0; y< n; y++){
+               if(grid[x][y] == 1 || grid[x][y] == 2){
+                   continue;
+               }
+               if(blackList[x][y] == true){
+                   continue;
+               }
+               shortest = Math.min(shortest, distance[x][y] );
+           }
+       }
+       if(shortest == Integer.MAX_VALUE){
+           return -1;
+       }
+       return shortest;
+      
+   }
 	
 	public static void main(String[] args){
 		int[][] grid = {{0,1,0,0,0},{1,0,0,2,1},{0,1,0,0,0}};
