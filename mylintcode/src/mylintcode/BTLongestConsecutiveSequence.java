@@ -38,5 +38,30 @@ public class BTLongestConsecutiveSequence {
 			ret.max = right.max;
 		return ret;
 	}
+	
+	
+	public int method2(TreeNode root) {
+        if(root==null)
+            return 0;
+       maxLength = 1;
+       helper2(root, 0, root.val);
+       return maxLength;
+    }
+    
+    int maxLength;
+    public void helper2(TreeNode root, int curLength, int lastNode){
+        if(root==null)
+            return;
+        if(lastNode+1 == root.val){
+            curLength++;
+            maxLength = Math.max(maxLength, curLength);
+        }    
+        else{
+            curLength=1;
+        }
+        helper2(root.left, curLength, root.val);
+        helper2(root.right,curLength, root.val);
+        return;
+    }
 
 }

@@ -37,8 +37,8 @@ public class CourseSchedule2 {
 			}
 			start = findStart(dim, accessed);
 		}
-		if(count!=numCourse)
-		    return new int[];
+		if(count!=numCourses)
+		    return new int[0];
 		return ret;
 	}
 	

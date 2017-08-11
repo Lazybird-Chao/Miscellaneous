@@ -47,5 +47,33 @@ public class BTPathSum {
 		
 		return;
 	}
+	
+	
+	 public List<List<Integer>> method2(TreeNode root, int target) {
+	        if(root==null)
+	            return new ArrayList<List<Integer>>();
+	        ans = new ArrayList<List<Integer>>();
+	        List<Integer> path = new ArrayList<Integer>();
+	        helper2(root, target, path);
+	        return ans;
+	        
+    }
+    List<List<Integer>> ans;
+    
+    public void helper2(TreeNode root, int target, List<Integer> path){
+        if(root.left==null && root.right==null && target==root.val){
+            List<Integer> pathCopy = new ArrayList<Integer>(path);
+            pathCopy.add(root.val);
+            ans.add(pathCopy);
+            return;
+        }
+        path.add(root.val);
+        if(root.left!=null)
+            helper2(root.left, target-root.val, path);
+        if(root.right!=null)
+            helper2(root.right, target-root.val, path);
+        path.remove(path.size()-1);
+        return;
+    }
 
 }
