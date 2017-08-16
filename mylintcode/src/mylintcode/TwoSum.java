@@ -30,5 +30,22 @@ public class TwoSum {
     	return false;
     		
     }
+    
+    public int[] twoSum(int[] numbers, int target) {
+    	if(numbers==null || numbers.length==0)
+    		return new int[0];
+    	Map<Integer, Integer> records = new HashMap<Integer, Integer>();
+    	int[] res = new int[2];
+    	for(int i=0; i<numbers.length; i++) {
+    		if(records.containsKey(numbers[i])) {
+    			res[0] = records.get(numbers[i])+1;
+    			res[1] = i+1;
+    			break;
+    		}
+    		else
+    			records.put(target-numbers[i], i);
+    	}
+    	return res;
+    }
 
 }
