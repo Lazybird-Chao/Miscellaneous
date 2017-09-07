@@ -88,7 +88,7 @@ public class SerializeDeserializeBT {
     }
     
     TreeNode helper(String[] nodelist, int[] pos) {
-    	String cur = nodelist[pos];
+    	String cur = nodelist[pos[0]];
     	if(cur.equals("n")) {
     		pos[0]++;
     		return null;
