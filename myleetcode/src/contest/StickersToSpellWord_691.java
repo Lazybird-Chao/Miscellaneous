@@ -1,6 +1,6 @@
 package contest;
 
-public class StickersToSpellWord {
+public class StickersToSpellWord_691 {
 	public int minStickers(String[] stickers, String target) {
         if(stickers == null || stickers.length == 0 || target == null || target.length() ==0)
             return 0;

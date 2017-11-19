@@ -1,6 +1,6 @@
 package contest;
 
-public class RemoveComment {
+public class RemoveComment_722 {
 	public List<String> removeComments(String[] source) {
         if(source == null || source.length == 0)
             return new ArrayList<String>();

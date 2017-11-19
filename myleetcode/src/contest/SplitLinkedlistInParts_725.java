@@ -1,6 +1,6 @@
 package contest;
 
-public class SplitLinkedlistInParts {
+public class SplitLinkedlistInParts_725 {
 	public ListNode[] splitListToParts(ListNode root, int k) {
         if(root == null)
             return new ListNode[k];

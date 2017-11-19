@@ -1,6 +1,6 @@
 package contest;
 
-public class MinDeleSumForTwoStrings {
+public class MinDeleSumForTwoStrings_712 {
 	public int minimumDeleteSum(String s1, String s2) {
         if(s1 == null || s1.isEmpty())
             return 0;

@@ -1,6 +1,6 @@
 package contest;
 
-public class PivotIndex {
+public class PivotIndex_724 {
 	public int pivotIndex(int[] nums) {
         if(nums == null || nums.length == 0)
             return -1;

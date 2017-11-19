@@ -1,6 +1,6 @@
 package contest;
 
-public class CandyCrush {
+public class CandyCrush_723 {
 	public int[][] candyCrush(int[][] board) {
         if(board == null || board.length == 0 || board[0].length ==0)
             return new int[0][0];

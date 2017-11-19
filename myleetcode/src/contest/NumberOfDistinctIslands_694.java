@@ -1,6 +1,6 @@
 package contest;
 
-public class NumberOfDistinctIslands {
+public class NumberOfDistinctIslands_694 {
 	public int numDistinctIslands(int[][] grid) {
         if(grid == null || grid.length == 0 || grid[0].length == 0)
             return 0;

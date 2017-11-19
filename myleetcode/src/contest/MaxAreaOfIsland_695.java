@@ -1,6 +1,6 @@
 package contest;
 
-public class MaxAreaOfIsland {
+public class MaxAreaOfIsland_695 {
 	public int maxAreaOfIsland(int[][] grid) {
         if(grid == null || grid.length == 0 || grid[0].length ==0)
             return 0;

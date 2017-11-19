@@ -1,6 +1,6 @@
 package contest;
 
-public class FallingSquares {
+public class FallingSquares_699 {
 	public List<Integer> fallingSquares(int[][] positions) {
         List<Integer> res = new ArrayList<Integer>();
         if(positions == null || positions.length == 0 || positions[0].length ==0)

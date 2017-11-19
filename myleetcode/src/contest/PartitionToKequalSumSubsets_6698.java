@@ -1,6 +1,6 @@
 package contest;
 
-public class PartitionToKequalSumSubsets {
+public class PartitionToKequalSumSubsets_6698 {
 	public boolean canPartitionKSubsets(int[] nums, int k) {
         if(nums == null || nums.length == 0)
             return false;

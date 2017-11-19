@@ -1,6 +1,6 @@
 package contest;
 
-public class CountBinarySubstrings {
+public class CountBinarySubstrings_696 {
 	public int countBinarySubstrings(String s) {
         if(s == null || s.isEmpty())
             return 0;

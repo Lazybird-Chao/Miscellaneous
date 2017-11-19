@@ -1,6 +1,6 @@
 package contest;
 
-public class NumberOfAtoms {
+public class NumberOfAtoms_726 {
 	public String countOfAtoms(String formula) {
         if(formula == null || formula.length() ==0)
             return "";

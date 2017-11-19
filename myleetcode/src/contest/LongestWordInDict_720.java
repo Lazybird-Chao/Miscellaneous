@@ -1,6 +1,6 @@
 package contest;
 
-public class LongestWordInDict {
+public class LongestWordInDict_720 {
 	public String longestWord(String[] words) {
         if(words == null || words.length == 0)
             return "";

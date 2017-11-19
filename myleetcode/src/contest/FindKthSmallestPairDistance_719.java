@@ -1,6 +1,6 @@
 package contest;
 
-public class FindKthSmallestPairDistance {
+public class FindKthSmallestPairDistance_719 {
 	/*
     public int smallestDistancePair(int[] nums, int k) {
         if(nums == null || nums.length ==0)

@@ -1,6 +1,6 @@
 package contest;
 
-public class AccountMerge {
+public class AccountMerge_721 {
 	public List<List<String>> accountsMerge(List<List<String>> accounts) {
         List<List<String>> res = new ArrayList<List<String>>();
         if(accounts == null || accounts.size() == 0)

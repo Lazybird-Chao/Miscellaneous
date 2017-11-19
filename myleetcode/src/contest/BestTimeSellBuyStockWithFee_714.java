@@ -1,6 +1,6 @@
 package contest;
 
-public class BestTimeSellBuyStockWithFee {
+public class BestTimeSellBuyStockWithFee_714 {
 	public int maxProfit(int[] prices, int fee) {
         if(prices == null || prices.length ==0)
             return 0;

@@ -1,6 +1,6 @@
 package contest;
 
-public class OnebitTwobitChar {
+public class OnebitTwobitChar_717 {
 	 public boolean isOneBitCharacter(int[] bits) {
 	        if(bits == null || bits.length ==0)
 	            return false;

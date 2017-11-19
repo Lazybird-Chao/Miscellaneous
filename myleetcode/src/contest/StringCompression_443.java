@@ -1,6 +1,6 @@
 package contest;
 
-public class StringCompression {
+public class StringCompression_443 {
 	public int compress(char[] chars) {
         if(chars == null || chars.length == 0)
             return 0;

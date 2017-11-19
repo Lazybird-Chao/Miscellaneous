@@ -1,6 +1,6 @@
 package contest;
 
-public class BinaryNumberWithAlternatingBits {
+public class BinaryNumberWithAlternatingBits_693 {
 	public boolean hasAlternatingBits(int n) {
         if(n<1)
             return false;

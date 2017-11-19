@@ -1,6 +1,6 @@
 package contest;
 
-public class MinimumWindowSubSequence {
+public class MinimumWindowSubSequence_727 {
 	public String minWindow(String S, String T) {
         if(S == null || T == null)
             return "";

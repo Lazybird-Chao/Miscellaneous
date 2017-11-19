@@ -1,6 +1,6 @@
 package contest;
 
-public class MaximumLengthOfRepeatedSubarrya {
+public class MaximumLengthOfRepeatedSubarrya_718 {
 	public int findLength(int[] A, int[] B) {
         if(A==null || B == null || A.length == 0 || B.length == 0)
             return 0;

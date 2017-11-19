@@ -1,6 +1,6 @@
 package contest;
 
-public class DegreeOfArray {
+public class DegreeOfArray_697 {
 	public int findShortestSubArray(int[] nums) {
         if(nums == null || nums.length ==0)
             return 0;
